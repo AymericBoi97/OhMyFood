@@ -10,12 +10,17 @@
     --button-bg-color:linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
  
 }
+a {
+    text-decoration: none;
+    color: #000;
+}
 
 @media only screen and (max-width: 640px){
 
     body {
         margin: 0;
         padding: 0px;
+        background-color: #f6f6f6;
     }
 
    footer {  
@@ -66,6 +71,19 @@
         display: flex;
         margin-bottom: 25px;
     }
+    .newlist {
+        display: flex;
+        position: absolute;
+        margin-left: 64%;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #99E2D0;
+        text-align: center;
+        align-items: center;
+        color:#008766;
+    }
     #restaurant {
         background-color: var(--main-bg-color);
         padding-bottom: 50px;
@@ -79,7 +97,7 @@
     #restaurant h2 {
         font-size: 18px;
     }
-    #restaurant p {
+    #restaurant .place {
         font-size: 17px;
         margin-top: -15px;
         padding-bottom: 15px;
@@ -90,11 +108,17 @@
         list-style: none;
     }
     nav ol li p {
-        border-radius :50px;
+        border-radius: 50px;
         text-align: center;
-        background :var(--main-color);
+        background: var(--main-color);
         color: white;
-        width: 20px;
+        width: 11px;
+        position: relative;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        margin-top: -43px;
+        margin-left: -11px;
 
     }
 
@@ -108,7 +132,7 @@
         vertical-align:middle;
         text-align:center;
         border-radius :15px;
-        background :var(--main-bg-color);
+        background :#f6f6f6;
         box-shadow: 2px 4px 3px lightgrey;
     }
     .fonctionnement h1 {
@@ -119,6 +143,7 @@
     .fonctionnement {
         padding-bottom: 25px;
         padding-top: 20px;
+        background-color: white;
     }
 
     .bouton{
@@ -126,18 +151,22 @@
         text-align: center;
         width: 55%;
         color: white;
-        background-color:var(--main-color);
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         border-radius: 25px;
         height:50px;
         font-size: 16px;
         text-decoration: none;
+        transition: all 2s ease-out;
+    }
+    .bouton:hover {
+        opacity:70%;
     }
     .reservation {
         display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
-        background-color: var(--main-bg-color);
+        background-color:#f6f6f6;
         padding-bottom: 40px;
     }
     .reservation p {
@@ -180,5 +209,89 @@
         padding-top: 15px;
         padding-bottom: 10px;
         box-shadow: 2px 4px 3px black;
+        background-color: white;
+    }
+
+    .icon-heart:active{
+        color: red
+    }
+    /* LES AUTRES PAGES */
+
+    .retour {
+        position: absolute;
+        padding-top: 28px;
+        background-color: white;
+        border-color: white;
+        box-shadow: 0px 0px 0px white;
+        padding-left: 20px;
+        border-style: none;
+    }
+    .restaurant-img img {
+        object-fit: cover;
+        width: 100%;
+        height: 220px;
+        position: relative;
+    }
+
+    h2, h3, p ,.price {
+        padding-left: 15px;
+    }
+    .menu h2 {
+        margin-bottom: -2px;
+        font-family: Roboto;
+        text-transform: uppercase;
+        font-weight: lighter;
+        text-decoration: underline #99E2D0;
+        
+    }
+    .commander {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+    .restaurant-menu {
+        border-top: 20px;
+
+
+    }
+    .restaurant-title {
+        display: flex;
+        padding-top: 10px;
+        border-radius: 20px;
+        background-color: #f6f6f6;
+        position: relative;
+        margin-top: -40px;
+        justify-content: space-between;
+    }
+    .restaurant-title i {
+        padding-top: 46px;
+    }
+
+    .menu-content {
+        background-color: white;
+        height: 70px;
+        border-radius: 15px;
+        width: 94%;
+        margin-left: 12px;
+        margin-top: 13px;
+        box-shadow: 2px 4px 3px #EAEAEA;
+        
+    }
+    .menu-title {
+        margin-top: 12px;
+        padding-top: 10px;
+    }
+    .description-prix {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-top: -23px;
+        width: 95%;
+    }
+    .description-prix p {
+        font-size: 15px;
     }
 }
