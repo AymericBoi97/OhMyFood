@@ -534,7 +534,7 @@ a {
     justify-content: space-evenly;
   }
   footer img {
-    padding-left: 37px;
+    padding-left: 60px;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(120deg) brightness(120%) contrast(102%);
     width: 138px;
   }
@@ -651,7 +651,7 @@ a {
     padding-top: 50px;
     padding-bottom: 8%;
   }
-  .menu__content {
+  .menu .menu__content {
     background-color: white;
     height: 70px;
     border-radius: 15px;
@@ -661,11 +661,11 @@ a {
     padding-bottom: 20px;
     box-shadow: 2px 4px 3px #EAEAEA;
   }
-  .menu__title {
+  .menu .menu__content .menu__title {
     margin-top: 12px;
     padding-top: 10px;
   }
-  .menu__price__desc {
+  .menu .menu__content .menu__price__desc {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -673,7 +673,7 @@ a {
     margin-top: -23px;
     width: 95%;
   }
-  .menu__price__desc p {
+  .menu .menu__content .menu__price__desc p {
     font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
