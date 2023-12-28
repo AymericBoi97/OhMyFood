@@ -271,7 +271,31 @@ a {
         font-family: Roboto;
         text-transform: uppercase;
         font-weight: lighter;
-        text-decoration: underline #99E2D0;
+         .underline-custom {
+            font-family: Roboto;
+            position: relative;
+            display: inline-block;
+        }
+
+        .underline-custom::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%; /* Pleine largeur du texte */
+            background-color:#99E2D0; /* Couleur de l'underline */
+            bottom: 0;
+        }
+
+        .underline-custom::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 60%; /* Ajustez la largeur de l'underline selon vos besoins */
+            background-color: white; /* Couleur de fond pour masquer l'underline en trop */
+            bottom: 0;
+            left: 100%; /* Alignez l'underline à droite du texte */
+        }
+        
         
     }
     .commander {
@@ -279,7 +303,7 @@ a {
         display: flex;
         flex-direction: column;
         padding-bottom: 40px;
-        margin-top: 3%;
+        margin-top: 10%;
     }
     .check {
         font-size: 16px;
@@ -622,7 +646,31 @@ a {
         font-family: Roboto;
         text-transform: uppercase;
         font-weight: lighter;
-        text-decoration: underline #99E2D0;
+         .underline-custom {
+            font-family: Roboto;
+            position: relative;
+            display: inline-block;
+        }
+
+        .underline-custom::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%; /* Pleine largeur du texte */
+            background-color:#99E2D0; /* Couleur de l'underline */
+            bottom: 0;
+        }
+
+        .underline-custom::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 60%; /* Ajustez la largeur de l'underline selon vos besoins */
+            background-color: white; /* Couleur de fond pour masquer l'underline en trop */
+            bottom: 0;
+            left: 100%; /* Alignez l'underline à droite du texte */
+        }
+        
         
     }
     .commander {
@@ -935,9 +983,10 @@ a {
             padding-bottom: 10px;
             display: flex;
             flex-direction: row-reverse;
-            justify-content: space-evenly;
+            justify-content: normal;
+            padding-right: 10%;
             img {
-               padding-left: 60px;
+               padding-left: 7%;
                filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(120deg) brightness(120%) contrast(102%);
                width: 138px;
            }
@@ -984,7 +1033,31 @@ a {
             font-family: Roboto;
             text-transform: uppercase;
             font-weight: lighter;
-            text-decoration: underline #99E2D0;
+             .underline-custom {
+                font-family: Roboto;
+                position: relative;
+                display: inline-block;
+            }
+    
+            .underline-custom::before {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 100%; /* Pleine largeur du texte */
+                background-color:#99E2D0; /* Couleur de l'underline */
+                bottom: 0;
+            }
+    
+            .underline-custom::after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 60%; /* Ajustez la largeur de l'underline selon vos besoins */
+                background-color: white; /* Couleur de fond pour masquer l'underline en trop */
+                bottom: 0;
+                left: 100%; /* Alignez l'underline à droite du texte */
+            }
+            
             
         }
         .commander {
@@ -1107,7 +1180,14 @@ a {
                 }
             }
         }
-    
+        footer {  
+            width: 100%;
+            img {
+               padding-left: 7%;
+               filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(120deg) brightness(120%) contrast(102%);
+               width: 138px;
+           }
+        }
 
 
 

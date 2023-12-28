@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /****** General ***********/
 * {
   font-family: "Roboto", sans-serif;
@@ -261,15 +262,35 @@ a {
     font-family: Roboto;
     text-transform: uppercase;
     font-weight: lighter;
-    -webkit-text-decoration: underline #99E2D0;
-            text-decoration: underline #99E2D0;
+  }
+  .menu h2 .underline-custom {
+    font-family: Roboto;
+    position: relative;
+    display: inline-block;
+  }
+  .menu h2 .underline-custom::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%; /* Pleine largeur du texte */
+    background-color: #99E2D0; /* Couleur de l'underline */
+    bottom: 0;
+  }
+  .menu h2 .underline-custom::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 60%; /* Ajustez la largeur de l'underline selon vos besoins */
+    background-color: white; /* Couleur de fond pour masquer l'underline en trop */
+    bottom: 0;
+    left: 100%; /* Alignez l'underline à droite du texte */
   }
   .commander {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding-bottom: 40px;
-    margin-top: 3%;
+    margin-top: 10%;
   }
   .check {
     font-size: 16px;
@@ -579,8 +600,28 @@ a {
     font-family: Roboto;
     text-transform: uppercase;
     font-weight: lighter;
-    -webkit-text-decoration: underline #99E2D0;
-            text-decoration: underline #99E2D0;
+  }
+  .menu h2 .underline-custom {
+    font-family: Roboto;
+    position: relative;
+    display: inline-block;
+  }
+  .menu h2 .underline-custom::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%; /* Pleine largeur du texte */
+    background-color: #99E2D0; /* Couleur de l'underline */
+    bottom: 0;
+  }
+  .menu h2 .underline-custom::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 60%; /* Ajustez la largeur de l'underline selon vos besoins */
+    background-color: white; /* Couleur de fond pour masquer l'underline en trop */
+    bottom: 0;
+    left: 100%; /* Alignez l'underline à droite du texte */
   }
   .commander {
     align-items: center;
@@ -863,10 +904,11 @@ a {
     padding-bottom: 10px;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: normal;
+    padding-right: 10%;
   }
   footer img {
-    padding-left: 60px;
+    padding-left: 7%;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(120deg) brightness(120%) contrast(102%);
     width: 138px;
   }
@@ -909,8 +951,28 @@ a {
     font-family: Roboto;
     text-transform: uppercase;
     font-weight: lighter;
-    -webkit-text-decoration: underline #99E2D0;
-            text-decoration: underline #99E2D0;
+  }
+  .menu h2 .underline-custom {
+    font-family: Roboto;
+    position: relative;
+    display: inline-block;
+  }
+  .menu h2 .underline-custom::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%; /* Pleine largeur du texte */
+    background-color: #99E2D0; /* Couleur de l'underline */
+    bottom: 0;
+  }
+  .menu h2 .underline-custom::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 60%; /* Ajustez la largeur de l'underline selon vos besoins */
+    background-color: white; /* Couleur de fond pour masquer l'underline en trop */
+    bottom: 0;
+    left: 100%; /* Alignez l'underline à droite du texte */
   }
   .commander {
     align-items: center;
@@ -1007,5 +1069,13 @@ a {
   }
   .menu .menu__content .menu__price__desc p {
     font-size: 15px;
+  }
+  footer {
+    width: 100%;
+  }
+  footer img {
+    padding-left: 7%;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(120deg) brightness(120%) contrast(102%);
+    width: 138px;
   }
 }/*# sourceMappingURL=style.css.map */
