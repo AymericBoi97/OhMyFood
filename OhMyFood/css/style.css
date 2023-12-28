@@ -345,11 +345,14 @@ a {
     justify-content: space-between;
   }
   .restaurant__menu .restaurant__title i {
-    padding-top: 46px;
+    padding-top: 60px;
+    padding-right: 35px;
   }
   .restaurant__menu .restaurant__title h2 {
     font-family: "Shrikhand", serif;
     font-weight: lighter;
+    padding-left: 5%;
+    font-size: 1.9em;
   }
   .menu__content {
     background-color: white;
@@ -1045,9 +1048,9 @@ a {
     justify-content: space-between;
   }
   .restaurant__title i {
-    padding-top: 39px;
+    padding-top: 46px;
     position: relative;
-    right: 35%;
+    right: 43%;
   }
   .restaurant__title h2 {
     font-family: "Shrikhand", serif;
