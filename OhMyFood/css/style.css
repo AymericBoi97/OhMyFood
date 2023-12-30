@@ -164,11 +164,13 @@ a {
     border-radius: 50px;
     background: var(--main-color);
     color: white;
-    width: 11px;
+    width: 26px;
     position: relative;
-    height: 26px;
+    height: 23px;
     margin-top: -43px;
     margin-left: -11px;
+    text-align: center;
+    padding-top: 4px;
   }
   .bouton {
     line-height: 50px;
@@ -254,7 +256,10 @@ a {
     height: 220px;
     position: relative;
   }
-  h2, h3, p, .price {
+  h2 {
+    padding-left: 15px;
+  }
+  .restaurant__place {
     padding-left: 15px;
   }
   .menu h2 {
@@ -385,6 +390,7 @@ a {
   .menu__title {
     margin-top: 12px;
     padding-top: 10px;
+    padding-left: 15px;
   }
   .menu__price__desc {
     display: flex;
@@ -393,6 +399,7 @@ a {
     align-items: baseline;
     margin-top: -23px;
     width: 95%;
+    padding-left: 15px;
   }
   .menu__price__desc p {
     font-size: 15px;
@@ -551,6 +558,7 @@ a {
   }
   .restaurant__place {
     font-size: 17px;
+    padding-left: 15px;
   }
   i {
     padding-right: 15px;
@@ -618,7 +626,7 @@ a {
     height: 220px;
     position: relative;
   }
-  h2, h3, p, .price {
+  h2, h3, .price {
     padding-left: 15px;
   }
   .menu h2 {
@@ -769,6 +777,7 @@ a {
   }
   .menu .menu__content .menu__price__desc p {
     font-size: 15px;
+    padding-left: 15px;
   }
 }
 /* ----------------------------------------   VERSION DESKTOP ----------------------------------- */
@@ -787,7 +796,7 @@ a {
   }
   .icon-placeholder i {
     position: absolute;
-    left: 46%;
+    left: 45%;
     top: 52px;
     transform: translateY(-100%);
     font-size: 20px;
@@ -926,6 +935,7 @@ a {
   }
   .restaurant__place {
     font-size: 17px;
+    padding-left: 15px;
   }
   i {
     padding-right: 15px;
@@ -994,7 +1004,7 @@ a {
     height: 400px;
     position: relative;
   }
-  h2, h3, p, .price {
+  h2, h3, .price {
     padding-left: 15px;
   }
   .menu h2 {
@@ -1151,9 +1161,6 @@ a {
   .menu .menu__price__desc p {
     font-size: 15px;
   }
-}
-footer {
-  width: 100%;
 }
 footer img {
   padding-left: 7%;

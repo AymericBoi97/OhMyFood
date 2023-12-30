@@ -161,14 +161,16 @@ a {
                 }
             }
             p {
-               border-radius: 50px;
-               background: var(--main-color);
-               color: white;
-               width: 11px;
-               position: relative;
-               height: 26px;
-               margin-top: -43px;
-               margin-left: -11px;
+                border-radius: 50px;
+                background: var(--main-color);
+                color: white;
+                width: 26px;
+                position: relative;
+                height: 23px;
+                margin-top: -43px;
+                margin-left: -11px;
+                text-align: center;
+                padding-top: 4px;
             }
         }
     }
@@ -262,10 +264,14 @@ a {
         height: 220px;
         position: relative;
     }
-
-    h2, h3, p ,.price {
+   h2 {
+        padding-left: 15px;
+        }
+        
+    .restaurant__place {
         padding-left: 15px;
     }
+
     .menu h2 {
         margin-bottom: -2px;
         font-family: Roboto;
@@ -424,6 +430,7 @@ a {
     .menu__title {
         margin-top: 12px;
         padding-top: 10px;
+        padding-left: 15px;
     }
     .menu__price__desc{
         display: flex;
@@ -432,6 +439,7 @@ a {
         align-items: baseline;
         margin-top: -23px;
         width: 95%;
+        padding-left: 15px;
     }
     .menu__price__desc p {
         font-size: 15px;
@@ -594,6 +602,7 @@ a {
     }
     .restaurant__place {
         font-size: 17px;
+        padding-left: 15px;
     }
     
     i {
@@ -665,7 +674,7 @@ a {
         position: relative;
     }
 
-    h2, h3, p ,.price {
+    h2, h3,.price {
         padding-left: 15px;
     }
     .menu h2 {
@@ -843,6 +852,7 @@ a {
             }
             .menu__price__desc p {
                 font-size: 15px;
+                padding-left: 15px;
             }
         }
     }
@@ -865,7 +875,7 @@ a {
             position: relative;
             i {
                position: absolute;
-               left: 46%;
+               left: 45%;
                top: 52px;
                transform: translateY(-100%);
                font-size: 20px;
@@ -1006,6 +1016,7 @@ a {
         }
         .restaurant__place {
             font-size: 17px;
+            padding-left: 15px;
         }
         
         i {
@@ -1078,7 +1089,7 @@ a {
             position: relative;
         }
     
-        h2, h3, p ,.price {
+        h2, h3,.price {
             padding-left: 15px;
         }
         .menu h2 {
@@ -1265,7 +1276,7 @@ a {
             }
         }
         footer {  
-            width: 100%;
+            
             img {
                padding-left: 7%;
                filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(120deg) brightness(120%) contrast(102%);
