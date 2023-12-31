@@ -793,7 +793,8 @@ a {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     text-align: center;
-    background-color: pink;
+    background-color: #99E2D0;
+    color: #F2F2F2;
     width: 100px;
     height: 94px;
     position: absolute;
