@@ -866,6 +866,8 @@ a {
         }
         
         .menu__content .price {
+            position: absolute;
+            left: 66.5%;
             transition: transform 0.5s ease;
         }
         
@@ -879,15 +881,25 @@ a {
             border-bottom-right-radius: 15px;
             text-align: center;
             background-color:#99E2D0;
-            color:#F2F2F2;
+            color:#99e2d0;
             width: 100px;
             height: 94px;
-            position: absolute;
-            top: 46%;
-            left: 67.5%;
+            position: relative;
+            top: -44px;
+            left: 2.5%;
             transform: translate(80%);
             opacity: 0;
             transition: opacity 0.5s ease, transform 0.5s ease;
+            .circle-check {
+                position: relative;
+                left: 35%;
+                top: 35%;
+                background-color: #fff;
+                width: 28%;
+                height: 28%;
+                border-radius: 15px;
+                display: block;
+            }
         }
         
         /* Effet de survol pour l'icône */
