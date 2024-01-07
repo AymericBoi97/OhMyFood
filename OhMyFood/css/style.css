@@ -15,6 +15,60 @@ a {
   color: #000;
 }
 
+.fa-heart {
+  font-size: 25px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.content {
+  margin: 20px;
+}
+
 @media screen and (max-width: 768px) {
   body {
     margin: 0;
@@ -61,7 +115,7 @@ a {
     margin-top: -20px;
     margin-bottom: -15px;
   }
-  i {
+  i .fa-heart {
     padding-right: 15px;
     margin-top: -30px;
     font-size: 25px;
@@ -160,6 +214,10 @@ a {
   }
   .fonctionnement nav ul li a i {
     font-size: 16px;
+    margin-right: 12%;
+  }
+  .fonctionnement nav ul li a i:hover {
+    color: var(--main-color);
   }
   .fonctionnement nav ul li p {
     border-radius: 50px;
@@ -225,7 +283,7 @@ a {
   .icon-placeholder i {
     position: absolute;
     left: 32%;
-    top: 63px;
+    top: 33px;
     transform: translateY(-100%);
     font-size: 20px;
     color: #353535;
@@ -237,28 +295,33 @@ a {
     box-shadow: 2px 4px 3px black;
     background-color: white;
   }
+  /* Style commun pour le conteneur de l'indice de cœur */
   .heart-index {
     position: relative;
-    top: -70px;
+    top: -50px;
     left: 90%;
+    font-size: 20px;
   }
+  /* Style pour l'icône de cœur rempli */
   .heart-index i.fa-solid {
     color: #e685e0;
-  }
-  /* Cacher le cœur plein initialement */
-  .heart-index i.fa-solid {
     display: none;
   }
-  .heart-toggle-index {
+  /* Style pour l'icône de cœur vide */
+  .heart-index i.fa-regular {
+    display: inline-block;
+  }
+  /* Masquer la case à cocher du cœur hors écran */
+  .heart-toggle {
     position: absolute;
     left: -9999px;
   }
-  /* Afficher le cœur vide lorsque la case à cocher est cochée */
-  .heart-toggle-index:checked + .heart-index i.fa-solid {
+  /* Afficher le cœur rempli lorsque la case à cocher est cochée */
+  .heart-toggle:checked + .heart-index i.fa-solid {
     display: inline-block;
   }
-  /* Cacher le cœur vide lorsque la case à cocher est cochée */
-  .heart-toggle-index:checked + .heart-index i.regular {
+  /* Masquer le cœur vide lorsque la case à cocher est cochée */
+  .heart-toggle:checked + .heart-index i.fa-regular {
     display: none;
   }
   /*     --------------------------------------------------------------------------  LES AUTRES PAGES     -------------------------------------------------------------------------- */
@@ -280,9 +343,11 @@ a {
   }
   h2 {
     padding-left: 15px;
+    margin-top: 2%;
   }
   .restaurant__place {
     padding-left: 15px;
+    margin-top: 1%;
   }
   .menu h2 {
     margin-bottom: -2px;
@@ -387,12 +452,12 @@ a {
   .restaurant__menu .heart-toggle:checked + .heart i.fa-solid {
     display: inline-block;
   }
-  .restaurant__menu .heart-toggle:checked + .heart i.regular {
+  .restaurant__menu .heart-toggle:checked + .heart i.fa-regular {
     display: none;
   }
   .restaurant__menu .restaurant__title i {
-    padding-top: 60px;
-    padding-right: 35px;
+    padding-top: 22px;
+    padding-right: 85px;
   }
   .restaurant__menu .restaurant__title h2 {
     font-family: "Shrikhand", serif;
@@ -463,6 +528,7 @@ a {
   .menu__content:active .icon-container {
     opacity: 1; /* Rend l'icône visible lors du survol */
     transform: translateX(20px); /* Animation de glissement de droite à gauche */
+    overflow: hidden;
   }
 }
 /*
@@ -569,7 +635,11 @@ a {
   }
   .fonctionnement nav ul li a i {
     font-size: 16px;
-    padding-left: 9%;
+    margin-right: 1%;
+    margin-left: 9%;
+  }
+  .fonctionnement nav ul li a i:hover {
+    color: var(--main-color);
   }
   .fonctionnement nav ul li p {
     border-radius: 50px;
@@ -669,6 +739,31 @@ a {
     display: flex;
     justify-content: space-around;
   }
+  .heart-index {
+    position: relative;
+    top: -70px;
+    left: 90%;
+    font-size: 20px;
+  }
+  .heart-index i.fa-solid {
+    color: #e685e0;
+  }
+  /* Cacher le cœur plein initialement */
+  .heart-index i.fa-solid {
+    display: none;
+  }
+  .heart-toggle {
+    position: relative;
+    left: -9999px;
+  }
+  /* Afficher le cœur vide lorsque la case à cocher est cochée */
+  .heart-toggle:checked + .heart-index i.fa-solid {
+    display: inline-block;
+  }
+  /* Cacher le cœur vide lorsque la case à cocher est cochée */
+  .heart-toggle:checked + .heart-index i.fa-regular {
+    display: none;
+  }
   /*-----------------------  DEUXIEME PARTIE TABLETTE --------------------- */
   .retour {
     position: absolute;
@@ -725,6 +820,12 @@ a {
     margin-left: 10%;
     margin-right: 10%;
     background-color: #f6f6f6;
+  }
+  .fa-check {
+    font-size: 15px;
+    position: relative;
+    left: 20%;
+    top: 18%;
   }
   .check {
     font-size: 16px;
@@ -783,7 +884,7 @@ a {
     color: #e685e0;
   }
   /* Cacher le cœur plein initialement */
-  .heart i.fa-regular {
+  .heart i.fa-solid {
     display: none;
   }
   .heart-toggle {
@@ -791,11 +892,11 @@ a {
     left: -9999px;
   }
   /* Afficher le cœur vide lorsque la case à cocher est cochée */
-  .heart-toggle:checked + .heart i.fa-regular {
+  .heart-toggle:checked + .heart i.fa-solid {
     display: inline-block;
   }
   /* Cacher le cœur vide lorsque la case à cocher est cochée */
-  .heart-toggle:checked + .heart i.fa-solid {
+  .heart-toggle:checked + .heart i.fa-regular {
     display: none;
   }
   .restaurant__title i {
@@ -865,6 +966,7 @@ a {
     transform: translate(80%);
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow: visible;
   }
   .icon-container .circle-check {
     position: relative;
@@ -985,7 +1087,8 @@ a {
   }
   .fonctionnement nav ul li a i {
     font-size: 16px;
-    padding-left: 9%;
+    margin-right: 1%;
+    margin-left: 9%;
   }
   .fonctionnement nav ul li a i:hover {
     color: var(--main-color);
@@ -1088,6 +1191,31 @@ a {
   .footer-nav nav ul ul {
     display: flex;
     justify-content: space-around;
+  }
+  .heart-index {
+    position: relative;
+    top: -70px;
+    left: 90%;
+    font-size: 20px;
+  }
+  .heart-index i.fa-solid {
+    color: #e685e0;
+  }
+  /* Cacher le cœur plein initialement */
+  .heart-index i.fa-solid {
+    display: none;
+  }
+  .heart-toggle {
+    position: relative;
+    left: -9999px;
+  }
+  /* Afficher le cœur vide lorsque la case à cocher est cochée */
+  .heart-toggle:checked + .heart-index i.fa-solid {
+    display: inline-block;
+  }
+  /* Cacher le cœur vide lorsque la case à cocher est cochée */
+  .heart-toggle:checked + .heart-index i.fa-regular {
+    display: none;
   }
   /*-----------------------  DEUXIEME PARTIE PC --------------------- */
   .retour {
@@ -1203,7 +1331,7 @@ a {
     color: #e685e0;
   }
   /* Cacher le cœur plein initialement */
-  .heart i.fa-regular {
+  .heart i.fa-solid {
     display: none;
   }
   .heart-toggle {
@@ -1211,11 +1339,11 @@ a {
     left: -9999px;
   }
   /* Afficher le cœur vide lorsque la case à cocher est cochée */
-  .heart-toggle:checked + .heart i.fa-regular {
+  .heart-toggle:checked + .heart i.fa-solid {
     display: inline-block;
   }
   /* Cacher le cœur vide lorsque la case à cocher est cochée */
-  .heart-toggle:checked + .heart i.fa-solid {
+  .heart-toggle:checked + .heart i.fa-regular {
     display: none;
   }
   .restaurant__title i {
