@@ -1533,12 +1533,12 @@ body {
                     text-align: center;
                     background-color: #99E2D0;
                     color: #99e2d0;
-                    font-size: 12px;
+                    font-size: 22px;
                     width: 100px;
                     height: 91px;
                     position: relative;
-                    top: -46.5px;
-                    left: 3.5%;
+                    bottom: 44.5px;
+                    left: 4%;
                     transform: translate(80%);
                     opacity: 0; /* Initialement invisible */
                     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -1546,12 +1546,19 @@ body {
                 .circle-check {
                     background-color: #F2F2F2;
                     display: block;
+                    font-size: 12px;
                     width: 24px;
                     height: 24px;
                     border-radius: 15px;
                     left: 35%;
                     top: 35%;
                     position: relative;
+                    i{
+                        font-size: 16px;
+                        position: relative;
+                        top: 35%;
+                        left: 15%;
+                    }
                 }
                 
                 /* Effet de survol pour l'icône */
